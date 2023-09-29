@@ -1,0 +1,98 @@
+@use "../01-abstracts" as ab;
+$url-mobile: '../assets/images/bg-intro-mobile.svg'; 
+$url-desktop: '../assets/images/bg-intro-desktop.svg'; 
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-s);
+  text-align: center;
+  align-items: center;
+  margin-top: -13.5rem;
+  position: relative;
+  @include ab.breakpoint(md) {
+    margin-block: calc(-4rem - var(--space-3xl));
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+  @include ab.breakpoint(lg) {
+    margin-block: calc(-8rem - var(--space-3xl));
+  }
+  @include ab.breakpoint(xl) {
+    margin-block: calc(-9.5rem - var(--space-3xl));
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url($url-mobile);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 130%;
+    height: 100%;
+    right: -2rem;
+    bottom: 11rem;
+    background-size: cover;
+
+    @include ab.breakpoint(md) {
+      background-image: url($url-desktop);
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 40rem;
+      height: 36rem;
+      right: -20rem;
+      bottom: -1rem;
+    }
+    @include ab.breakpoint(lg) {
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 75rem;
+      height: 45rem;
+      right: -38rem;
+      bottom: 2rem;
+    }
+    @include ab.breakpoint(xl) {
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 84rem;
+      height: 62rem;
+      right: -33rem;
+      bottom: -2rem;
+    }
+
+  }
+
+  & h1 {
+    margin: auto;
+
+    @include ab.breakpoint(md) {
+      margin: 0;
+    }
+  }
+  &__text {
+    order: 1;
+    --flow-space: var(--space-l);
+    @include ab.breakpoint(md) {
+      order: 0;
+    }
+
+    p {
+      @include ab.breakpoint(md) {
+        max-width: 42ch;
+      }
+    }
+  }
+
+  &__img {
+    z-index: 1;
+    @include ab.breakpoint(md) {
+      transform: translateX(6rem);
+    }
+    @include ab.breakpoint(lg) {
+      transform: translateX(10rem);
+    }
+    @include ab.breakpoint(xl) {
+      transform: translateX(15rem);
+    }
+  }
+}

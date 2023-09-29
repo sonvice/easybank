@@ -1,0 +1,16 @@
+@use '../01-abstracts' as ab;
+.title-bank{
+    text-align: center;
+
+    @include ab.breakpoint(md){
+        text-align: left;
+    }
+
+}
+
+.title-articles{
+    text-align: center;
+    @include ab.breakpoint(md){
+        text-align: left;
+    }
+}

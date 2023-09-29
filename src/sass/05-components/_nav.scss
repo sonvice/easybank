@@ -1,0 +1,118 @@
+@use "../01-abstracts" as ab;
+
+main[data-overlay="true"]::before {
+  content: "";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.604), rgba(0, 0, 0, 0.304));
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  @include ab.breakpoint(md) {
+    display: none;
+  }
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow:
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.012),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.018),
+  100px 100px 80px rgba(0, 0, 0, 0.03)
+;
+
+  @include ab.breakpoint(md) {
+    padding-bottom: 0;
+  }
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-block: var(--space-xs);
+  @include ab.breakpoint(md){
+    padding-block: 0;
+  }
+  &__burguer {
+    background-color: transparent;
+    padding: var(--space-2xs);
+    @include ab.breakpoint(md) {
+      display: none;
+    }
+  }
+
+  & .btn {
+    display: none;
+    @include ab.breakpoint(md) {
+      display: block;
+    }
+  }
+
+  &__header {
+    display: flex;
+
+    @include ab.breakpoint(md) {
+      align-self: stretch;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid transparent;
+      color: var(--gray-blue);
+      &:hover {
+        border-bottom: 3px solid var(--color-secondary);
+        transition: 0.3s ease;
+        color: var(--primary);
+      }
+
+      a {
+        @include ab.breakpoint(md) {
+          padding-block: var(--space-m);
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    @include ab.breakpoint-down(md) {
+      display: none;
+      position: absolute;
+      top: 130%;
+      width: 100%;
+      border-radius: 8px;
+      ul {
+        display: grid;
+        gap: var(--space-s);
+        justify-items: center;
+        padding: var(--space-s);
+      }
+    }
+
+    @include ab.breakpoint(md) {
+      ul {
+        display: flex;
+        gap: var(--space-m);
+      }
+    }
+    @include ab.breakpoint(lg) {
+      ul {
+        gap: var(--space-l);
+      }
+    }
+  }
+
+  &__header[data-visible="true"] {
+    display: block;
+  }
+}

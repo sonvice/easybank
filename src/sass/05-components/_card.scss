@@ -1,0 +1,22 @@
+@use '../01-abstracts' as ab;
+.card{
+    --flow-space:var(--space-m);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(17rem,1fr));
+    gap: var(--space-xl);
+
+    &__item{
+        text-align: center;
+        @include ab.breakpoint(md){
+            text-align: left;
+        }
+    }
+
+    & img{
+        margin: auto;
+        @include ab.breakpoint(md){
+            margin: 0;
+        }
+    }   
+
+}

@@ -1,0 +1,24 @@
+.block-article{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(18rem,1fr));
+    gap: var(--space-l);
+    &__article{
+        border-radius: 8px;
+        overflow: hidden;
+
+        & img{
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+        }
+    }
+    a{
+        display: block;
+        text-decoration: none;
+        &:hover h3{
+            transition: .3s ease;
+            color: var(--color-secondary);
+        }
+    }
+    
+
+}

@@ -1,0 +1,8 @@
+.btn{
+    border-radius: 100vw;
+    font-weight: var(--fw-bold);
+
+    &:hover,&:focus-visible{
+        opacity: .8;
+    }
+}

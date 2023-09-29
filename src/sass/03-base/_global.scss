@@ -1,0 +1,87 @@
+:root {
+  //Space
+  --space-2xs: clamp(0.5rem, 0.48rem + 0.09vw, 0.56rem);
+  --space-xs: clamp(0.75rem, 0.71rem + 0.19vw, 0.88rem);
+  --space-s: clamp(1rem, 0.96rem + 0.19vw, 1.13rem);
+  --space-m: clamp(1.5rem, 1.43rem + 0.28vw, 1.69rem);
+  --space-l: clamp(2rem, 1.91rem + 0.38vw, 2.25rem);
+  --space-xl: clamp(3rem, 2.87rem + 0.56vw, 3.38rem);
+  --space-2xl: clamp(4rem, 3.82rem + 0.75vw, 4.5rem);
+  --space-3xl: clamp(4rem, 3.82rem + 0.75vw, 4.5rem);
+
+  //Size
+  --size--1: clamp(0.83rem, 0.83rem + 0.02vw, 0.84rem);
+  --base: clamp(1rem, 0.96rem + 0.19vw, 1.13rem);
+  --size-1: clamp(1.2rem, 1.09rem + 0.45vw, 1.5rem);
+  --size-2: clamp(1.44rem, 1.24rem + 0.84vw, 2rem);
+  --size-3: clamp(1.73rem, 1.4rem + 1.41vw, 2.66rem);
+  --size-4: clamp(2.07rem, 1.55rem + 2.22vw, 3.55rem);
+  --size-5: clamp(2.49rem, 1.7rem + 3.38vw, 4.74rem);
+
+  //Color
+  --color-primary: hsl(233, 26%, 24%);
+  --color-secondary: hsl(136, 65%, 51%);
+  --color-tertiary: hsl(192, 70%, 51%);
+
+  --gray-blue: hsl(233, 8%, 62%);
+  --very-light-gray:hsl(0, 0%, 98%);
+
+  //Font Weight
+  --fw-regular:300;
+  --fw-semibold:400;
+  --fw-bold:700;
+}
+
+body {
+  //padding: var(--space-m) var(--space-m);
+  font-family: "Public Sans", sans-serif;
+  font-size: var(--base);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: var(--size-4);
+}
+
+h2 {
+  font-size: var(--size-3);
+}
+
+h3 {
+  font-size: var(--size-2);
+}
+
+p,
+li {
+  max-width: 60ch;
+}
+
+h1 {
+  max-width: 15ch;
+}
+
+h2,
+h3 {
+  max-width: 30ch;
+}
+
+a {
+  color: currentcolor;
+  text-decoration-color: var(--color-primary);
+}
+
+a:hover {
+  text-decoration: none;
+}
+button{
+cursor: pointer;
+border: 0;
+}

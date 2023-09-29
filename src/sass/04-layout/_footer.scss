@@ -1,0 +1,61 @@
+@use '../01-abstracts' as ab;
+.footer{
+    text-align: center;
+    @include ab.breakpoint(md){
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: var(--space-l);
+    }
+    @include ab.breakpoint(lg){
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    &__logo{
+        display: inline-block;
+        padding-bottom: var(--space-l);
+        @include ab.breakpoint(md){
+            display: block;
+        }
+    }
+
+    &__social{
+        display: flex;
+        justify-content: center;
+        gap: var(--space-xs);
+        color: var(--very-light-gray);
+        @include ab.breakpoint(md){
+            justify-content: flex-start;
+        }
+
+        & li:hover a{
+            color: var(--color-secondary);
+            transition: .3s ease;
+        }
+    }
+    &__nav{
+        padding-block: var(--space-l);
+        @include ab.breakpoint(md){
+            padding-block: 0;
+            text-align: left;
+            column-count: 2;
+        }
+
+        & a:hover{
+            color: var(--color-secondary);
+            transition: .3s ease;
+        }
+    }
+
+    &__box-btn{
+        @include ab.breakpoint(lg){
+            grid-column: 4 / span 1;
+            text-align: right;
+        }
+        
+    }
+
+    .social-icon{
+        fill: var(--color-secondary);
+    }
+}
