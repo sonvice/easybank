@@ -6,7 +6,7 @@ import { FaFacebookSquare,FaYoutubeSquare,FaTwitter,FaPinterest,FaInstagram } fr
 const Footer = () => {
   return (
     <footer className="footer container">
-      <div className="">
+      <div className="footer__social-box">
         
           <a href="#" className="footer__logo">
             <img src={logoWhite} alt="Logo" />
@@ -51,7 +51,7 @@ const Footer = () => {
       </nav>
       <div className="footer__box-btn">
         <Button text={"Request Invite"}></Button>
-        <p className="pt-space-l text-gray-blue">
+        <p className="pt-space-l size--1 text-gray-blue">
           © Easybank. All Rights Reserved
         </p>
       </div>

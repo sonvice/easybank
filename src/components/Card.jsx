@@ -7,7 +7,7 @@ const Card = () => {
       <div key={card.title} className="card__item flow">
         <img src={card.icon} alt={card.title} />
         <h3>{card.title}</h3>
-        <p className='text-gray-blue'>{card.description}</p>
+        <p className='text-gray-blue size--1'>{card.description}</p>
       </div>
     ))}
   </div>

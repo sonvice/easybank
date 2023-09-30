@@ -5,7 +5,7 @@ const Hero = () => {
   const label = 'Request Invite'
   return (
     <div className="container">
-      <div className="hero pt-space-4xl">
+      <div className="hero">
         <div className="hero__text flow">
           <h1>Next generation digital banking</h1>
           <p className="text-gray-blue">
@@ -16,7 +16,7 @@ const Hero = () => {
           <Buton text={label}></Buton>
         </div>
         <div className="hero__img">
-          <img src={imageMockups} alt="Mockups" />
+          <img width={767} height={969} src={imageMockups} alt="Mockups" />
         </div>
       </div>
     </div>

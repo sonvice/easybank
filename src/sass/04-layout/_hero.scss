@@ -8,15 +8,16 @@ $url-desktop: '../assets/images/bg-intro-desktop.svg';
   gap: var(--space-s);
   text-align: center;
   align-items: center;
-  margin-top: -13.5rem;
   position: relative;
   @include ab.breakpoint(md) {
     margin-block: calc(-4rem - var(--space-3xl));
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 50% 50%;
     text-align: left;
+    /* min-height: 70vh; */
   }
   @include ab.breakpoint(lg) {
     margin-block: calc(-8rem - var(--space-3xl));
+    /* min-height: 90vh; */
   }
   @include ab.breakpoint(xl) {
     margin-block: calc(-9.5rem - var(--space-3xl));
@@ -38,26 +39,17 @@ $url-desktop: '../assets/images/bg-intro-desktop.svg';
       background-image: url($url-desktop);
       background-position: center center;
       background-repeat: no-repeat;
-      width: 40rem;
-      height: 36rem;
-      right: -20rem;
-      bottom: -1rem;
+      width: 105%;
+      height: 100%;
+      right: -27rem;
+      bottom: 7rem;
     }
     @include ab.breakpoint(lg) {
       background-position: center center;
       background-repeat: no-repeat;
-      width: 75rem;
-      height: 45rem;
-      right: -38rem;
-      bottom: 2rem;
-    }
-    @include ab.breakpoint(xl) {
-      background-position: center center;
-      background-repeat: no-repeat;
-      width: 84rem;
-      height: 62rem;
-      right: -33rem;
-      bottom: -2rem;
+      height: 100%;
+      right: -34rem;
+      bottom: 4rem;
     }
 
   }
@@ -85,14 +77,19 @@ $url-desktop: '../assets/images/bg-intro-desktop.svg';
 
   &__img {
     z-index: 1;
+    margin-top: -82px;
+
+    & img{
+      height: auto;
+    }
+
     @include ab.breakpoint(md) {
-      transform: translateX(6rem);
+      margin-top: 74px;
+
+      width: 142%;
     }
     @include ab.breakpoint(lg) {
-      transform: translateX(10rem);
-    }
-    @include ab.breakpoint(xl) {
-      transform: translateX(15rem);
+      transform: translateX(3rem);
     }
   }
 }
