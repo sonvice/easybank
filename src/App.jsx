@@ -17,7 +17,7 @@ function App() {
         <section className="bg-very-light-gray py-space-4xl">
           <Articles></Articles>
         </section>
-        <section className="py-space-4xl bg-primary">
+        <section className="py-space-2xl bg-primary">
           <Footer></Footer>
         </section>
       </main>

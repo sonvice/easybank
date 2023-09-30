@@ -5,6 +5,7 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: var(--space-l);
+        align-items: end;
     }
     @include ab.breakpoint(lg){
         display: grid;
@@ -34,6 +35,7 @@
         justify-content: center;
         gap: var(--space-xs);
         color: var(--very-light-gray);
+        padding-inline: 0;
         @include ab.breakpoint(md){
             justify-content: flex-start;
         }
@@ -45,6 +47,7 @@
     }
     &__nav{
         padding-block: var(--space-l);
+        padding-inline: 0;
         li{
             max-width: none;
         }
