@@ -15,6 +15,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "http://localhost:5173/",
+    "start_url": "https://easybank-fmentor.netlify.app/",
     "display": "standalone"
 }
