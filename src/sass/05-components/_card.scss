@@ -2,8 +2,8 @@
 .card{
     --flow-space:var(--space-m);
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(17rem,1fr));
-    gap: var(--space-xl);
+    grid-template-columns: repeat(auto-fill,minmax(15.5rem,1fr));
+    gap: var(--space-m);
 
     &__item{
         text-align: center;

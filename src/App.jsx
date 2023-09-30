@@ -8,7 +8,7 @@ function App() {
         <Nav></Nav>
       
       <main>
-        <section className="bg-very-light-gray py-space-4xl">
+        <section className="bg-very-light-gray pt-space-4xl pb-space-2xl">
           <Hero></Hero>
         </section>
         <section className="bg-light-gray-blue py-space-4xl relative">

@@ -1,7 +1,7 @@
 .block-article{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(18rem,1fr));
-    gap: var(--space-l);
+    grid-template-columns: repeat(auto-fill,minmax(16rem,1fr));
+    gap: var(--space-s);
     &__article{
         border-radius: 8px;
         overflow: hidden;
